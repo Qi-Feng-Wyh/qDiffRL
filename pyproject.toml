@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qdiffrl"
+version = "0.1.0"
+description = "Policy gradient algorithms on differentiable physics (MuJoCo MJX): GI-PPO / RPO / PPO / DDCG / AoBG / IVW-H"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    # 版本与开发环境锁定一致：MJX 求解器补丁依赖 mujoco 3.11 的内部 API
+    "jax[cuda12]==0.6.2",
+    "flax==0.10.7",
+    "optax==0.2.8",
+    "mujoco==3.11.0",
+    "mujoco-mjx==3.11.0",
+    "brax==0.14.1",
+    "playground==0.1.0",      # mujoco_playground 的 PyPI 包名
+    "matplotlib",
+    "imageio",
+    "imageio-ffmpeg",
+    "numpy",
+]
+
+[tool.setuptools]
+packages = ["algos"]

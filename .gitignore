@@ -1,0 +1,19 @@
+# 环境与缓存
+.venv/
+.jax_cache/
+__pycache__/
+*.pyc
+
+# 实验产物
+runs/
+eval/
+figures/
+logs/
+*.log
+nohup.out
+
+# 归档与个人材料
+archive/
+backup/
+papers/
+report/
